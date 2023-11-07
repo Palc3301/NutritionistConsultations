@@ -42,7 +42,7 @@ public class ServicoService {
 		return servicoRepository.saveAndFlush(servico);
 	}
 	
-	public void excluir(Long id) {
+	public void remover(Long id) {
 		//.get pega o objeto ao inves do optional que o findById retorna.
 		Servico servico = servicoRepository.findById(id).get();
 		servicoRepository.delete(servico);
