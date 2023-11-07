@@ -42,6 +42,12 @@ public class ServicoService {
 		return servicoRepository.saveAndFlush(servico);
 	}
 	
+	public void cancelarServico(Long id) {
+		Servico servico = servicoRepository.findById(id).get();
+		servico.setStatus("cancelado");
+		servicoRepository.save(servico);
+	}
+	
 	public void remover(Long id) {
 		//.get pega o objeto ao inves do optional que o findById retorna.
 		Servico servico = servicoRepository.findById(id).get();

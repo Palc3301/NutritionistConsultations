@@ -1,0 +1,39 @@
+GET
+http://localhost:8080/api/servico/
+http://localhost:8080/api/servico/cancelados
+http://localhost:8080/api/servico/pagamentoPendente
+
+POST
+http://localhost:8080/api/servico/
+{
+    "nomeCliente":"Natalia Ramos",
+    "descricaoServico":"Avaliação"
+}
+
+http://localhost:8080/api/servico/4
+{
+    "id":4,
+    "nomeCliente":"Natalia Ramos",
+    "descricaoServico":"Consulta",
+    "valorServico":"200",
+    "status":"Cancelado",
+    "valorPago":"200",
+    "dataPagamento":"2023-11-01",
+    "dataTermino":"2023-11-01"
+}
+
+PUT
+http://localhost:8080/api/servico/
+{
+    "id":4,
+    "nomeCliente":"Natalia Ramos",
+    "descricaoServico":"Consulta",
+    "valorServico":"200",
+    "status":"Cancelado",
+    "valorPago":"200",
+    "dataPagamento":"2023-11-01",
+    "dataTermino":"2023-11-01"
+}
+
+DELETE
+http://localhost:8080/api/servico/2
